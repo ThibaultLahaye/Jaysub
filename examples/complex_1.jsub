@@ -1,0 +1,44 @@
+a, b, c, z;
+
+procedure remove {
+    z += 505;
+    skip;
+}
+
+procedure recursive2 {
+    if (b - 0 == 25 * 10 - 5 * 50 + 1 * b) then {
+        c += 1;
+        skip;
+    } else {
+        call recursive1;
+        c += 1;
+    } fi (c == 1)
+}
+
+procedure recursive1 {
+    b += 2;
+    call recursive2;
+    b += 2;
+}
+
+procedure start_program {
+    from (a == 20) do {
+        b += 4;
+        a -= 1;
+        if (0 * a == 10) then {
+            c -= 15;
+        } else {
+            skip;
+        } fi (a == c)
+    } until (a == 0)
+    call recursive1;
+}
+
+procedure main {
+    skip;
+    a += 20;
+    b += 25;
+    c -= 40;
+    b <=> c;
+    uncall start_program;
+}

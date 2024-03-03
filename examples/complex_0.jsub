@@ -1,0 +1,29 @@
+x, y, z;
+
+procedure c {
+    skip;
+    x += 1;
+    call a;
+}
+
+procedure b {
+    x <=> y;
+    call c;
+}
+
+procedure a {
+    z += 1;
+    call b;
+}
+
+procedure z {
+    x += 5;
+    y /= x - 2;
+    call a;
+}
+
+procedure main {
+    y += 15;
+    uncall z;
+    z -= 3;
+}

@@ -1,0 +1,21 @@
+base, exp, res;
+
+procedure raise {
+    res += 1;
+    from (res == 1) do {
+        res *= base;
+        exp -= 1;
+    } until (exp == 0)
+}
+
+procedure unmain {
+    res += 1000;
+    base += 10;
+    uncall raise;
+}
+
+procedure main {
+    base += 10;
+    exp  += 3;
+    call raise;
+}

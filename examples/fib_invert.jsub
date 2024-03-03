@@ -1,0 +1,24 @@
+n, x1, x2;                           
+
+procedure fib {
+  if (x1 == x2) then {
+    x2 -= 1;
+    x1 -= 1;
+  } else {
+    x2 <=> x1;
+    x1 -= x2;
+    call fib;
+    n += 1;
+  } fi (n == 0)
+}
+
+procedure unmain {
+  uncall fib;
+  x2 -= 8;
+  x1 -= 5;
+}
+
+procedure main {
+  call fib;
+  n -= 4;
+}

@@ -1,0 +1,10 @@
+x, y;
+
+procedure update_vars {
+    x += 5;
+    y += 3;
+}
+
+procedure main {
+    call update_vars;
+}
